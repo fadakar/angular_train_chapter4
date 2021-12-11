@@ -1,0 +1,7 @@
+<table class="table table-striped table-bordered mt-5 table-success">
+  <tr *ngFor="let item of todoService.todos | async">
+    <td><a routerLink="/todo/{{ item }}">{{ item }}</a></td>
+    <td>done</td>
+    <td><button class="btn btn-danger" (click)="del(item)">del</button></td>
+  </tr>
+</table>
